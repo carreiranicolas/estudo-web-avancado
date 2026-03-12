@@ -1,0 +1,11 @@
+Flask
+
+[dev]
+ipython
+black
+flake8
+
+[tests]
+pytest>=8.3
+pytest-cov>=5.0
+pytest-flask

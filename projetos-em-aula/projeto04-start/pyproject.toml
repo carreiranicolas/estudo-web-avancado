@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>70.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+
+[project]
+name = "delivery"
+
+#Versionamento
+
+version = "0.1.0"
+description = "A web plataform for maneging food delivery orders and payment"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name="Nicolas Ramos Carreira", email="nicolascarreira2005@gmail.com"}
+]
+
+dependencies = [
+    "Flask"
+]
+
+[tool.delivery]
+display_name = "BaitaFome"
+company = "NicolauCompany"
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "black",
+    "flake8"
+]
+
+
+tests = [
+    "pytest >= 8.3",
+    "pytest-cov >= 5.0",
+    "pytest-flask"
+]
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+namespaces = true
+exclude = ["tests*", "docs*"]
